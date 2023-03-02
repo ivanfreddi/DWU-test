@@ -1,0 +1,29 @@
+<form (ngSubmit)="login()">
+  <h1>Login</h1>
+  <div>
+    <label>Usuário:</label>
+    <input
+      type="text"
+      name="user"
+      required
+      [(ngModel)]="user"
+      placeholder="Digite seu nome de usuário"
+    />
+  </div>
+  <div>
+    <label>Senha:</label>
+    <input
+      type="password"
+      name="password"
+      required
+      [(ngModel)]="password"
+      placeholder="Digite sua senha"
+    />
+  </div>
+
+  <p *ngIf="loginInvalid" class="error-message">
+    Usuário ou senha inválidos, tente novamente.
+  </p>
+
+  <button type="submit">Entrar</button>
+</form>

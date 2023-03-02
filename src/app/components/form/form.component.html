@@ -1,0 +1,47 @@
+<form (ngSubmit)="saveData()">
+  <h1>Formulário</h1>
+  <div>
+    <label>Nome:</label>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      name="name"
+      required
+      placeholder="Digite seu nome"
+    />
+  </div>
+  <div>
+    <label>Sobrenome:</label>
+    <input
+      type="text"
+      [(ngModel)]="lastName"
+      name="last-name"
+      required
+      placeholder="Digite seu sobrenome"
+    />
+  </div>
+  <div>
+    <label>Idade:</label>
+    <input
+      type="number"
+      [(ngModel)]="age"
+      name="age"
+      required
+      placeholder="Digite sua idade"
+    />
+  </div>
+  <div>
+    <label>Sexo:</label>
+    <select [(ngModel)]="gender" name="gender" required>
+      <option value="N">Não informado</option>
+      <option value="M">Masculino</option>
+      <option value="F">Feminino</option>
+    </select>
+  </div>
+  <div>
+    <label>Data de nascimento:</label>
+    <input type="date" [(ngModel)]="bornDate" name="born-date" required />
+  </div>
+  <p *ngIf="formEmpty" class="error-message">Preencha todos os campos.</p>
+  <button type="submit">Salvar dados</button>
+</form>
