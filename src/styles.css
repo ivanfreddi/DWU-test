@@ -20,12 +20,10 @@ body {
   }
   
   label {
-    display: block;
     margin-bottom: 5px;
   }
   
-  input,
-  select {
+  .inputForm {
     width: 100%;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -49,3 +47,4 @@ body {
     font-size: 1rem;
     margin-top: -5px;
   }
+

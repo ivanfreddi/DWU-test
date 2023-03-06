@@ -3,6 +3,7 @@
   <div>
     <label>Nome:</label>
     <input
+      class="inputForm"
       type="text"
       [(ngModel)]="name"
       name="name"
@@ -13,6 +14,7 @@
   <div>
     <label>Sobrenome:</label>
     <input
+      class="inputForm"
       type="text"
       [(ngModel)]="lastName"
       name="last-name"
@@ -23,6 +25,7 @@
   <div>
     <label>Idade:</label>
     <input
+      class="inputForm"
       type="number"
       [(ngModel)]="age"
       name="age"
@@ -32,7 +35,7 @@
   </div>
   <div>
     <label>Sexo:</label>
-    <select [(ngModel)]="gender" name="gender" required>
+    <select class="inputForm" [(ngModel)]="gender" name="gender" required>
       <option value="N">Não informado</option>
       <option value="M">Masculino</option>
       <option value="F">Feminino</option>
@@ -40,8 +43,35 @@
   </div>
   <div>
     <label>Data de nascimento:</label>
-    <input type="date" [(ngModel)]="bornDate" name="born-date" required />
+    <input
+      class="inputForm"
+      type="date"
+      [(ngModel)]="bornDate"
+      name="born-date"
+      required
+    />
   </div>
-  <p *ngIf="formEmpty" class="error-message">Preencha todos os campos.</p>
+  <p *ngIf="formEmpty" class="error-message">Preencha todos os campos acima.</p>
+  <form>
+    <input
+      type="checkbox"
+      [(ngModel)]="checkBox"
+      name="check-box"
+      value="email"
+    />
+    <label for="email">Receber email</label>
+  </form>
+  <form>
+    <label>
+      <input type="radio" name="status" [(ngModel)]="status" value="valor 0" />
+      Ativo
+    </label>
+
+    <label>
+      <input type="radio" name="status" [(ngModel)]="status" value="valor 1" />
+      Inativo
+    </label>
+  </form>
+
   <button type="submit">Salvar dados</button>
 </form>
